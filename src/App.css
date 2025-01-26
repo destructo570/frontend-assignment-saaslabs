@@ -3,6 +3,7 @@
   --surface-primary: #e2e2e2;
   --surface-disabled: #727272;
   --text-light: #ffffff;
+  --text-light-secondary: #ffffff85;
   --text-dark: #29292b;
 }
 
@@ -13,9 +14,13 @@
   text-align: center;
 }
 
-body{
+body, p, h1, h2{
   margin: 0px;
   padding: 0px;
+}
+
+p{
+  font-family: "Geist Mono";
 }
 
 @keyframes fadeInUp {

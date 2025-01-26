@@ -1,0 +1,28 @@
+.project-details {
+  max-width: 1200px;
+}
+
+.project-details-title {
+  font-family: "Geist Mono";
+}
+
+.project-details-description {
+  margin-top: 1rem;
+  color: var(--text-light-secondary);
+}
+
+.project-details-cont {
+  margin-top: 1rem;
+}
+
+.project-detail-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid #ffffff10;
+  padding: 6px 0;
+}
+
+.project-detail-item-title {
+  color: var(--text-light-secondary);
+}

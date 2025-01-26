@@ -46,7 +46,7 @@ const Pagination = (props) => {
         })}
         onClick={onPrevious}
       >
-        <Button disabled={currentPage === 1}>
+        <Button disabled={currentPage === 1} size="small">
           <ChevronLeft />
         </Button>
       </li>
@@ -55,7 +55,7 @@ const Pagination = (props) => {
         if (pageNumber === DOTS) {
           return (
             <li key={idx + 1} className="pagination-item dots">
-              <Button>&#8230;</Button>
+              <Button  size="small">&#8230;</Button>
             </li>
           );
         }
@@ -69,7 +69,7 @@ const Pagination = (props) => {
             onClick={() => onPageChange(pageNumber)}
             key={idx + 1}
           >
-            <Button isActive={pageNumber === currentPage}>{pageNumber}</Button>
+            <Button isActive={pageNumber === currentPage}  size="small">{pageNumber}</Button>
           </li>
         );
       })}
@@ -80,7 +80,7 @@ const Pagination = (props) => {
         })}
         onClick={onNext}
       >
-        <Button disabled={currentPage === lastPage}>
+        <Button disabled={currentPage === lastPage}  size="small">
           <ChevronRight />
         </Button>
       </li>

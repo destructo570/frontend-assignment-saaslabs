@@ -13,6 +13,7 @@ h1 {
 table {
   width: 100%;
   font-family: "Geist Mono";
+  margin-top: 1rem;
 }
 
 td {
@@ -22,4 +23,9 @@ td {
 
 .project-title {
   text-align: left;
+}
+
+.project-title:hover{
+  color: var(--primary-accent);
+  cursor: pointer;
 }

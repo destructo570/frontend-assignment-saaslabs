@@ -4,9 +4,10 @@ import classNames from "classnames";
 
 const Button = ({
   children,
-  size = "small",
+  size = "large",
   disabled = false,
   isActive = false,
+  ...restProps
 }) => {
   return (
     <button
@@ -15,6 +16,7 @@ const Button = ({
         "btn-active": isActive,
       })}`}
       disabled={disabled}
+      {...restProps}
     >
       {children}
     </button>
