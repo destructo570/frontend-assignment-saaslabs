@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router";
 import { convertNumberToLocaleString } from "../../utils/utils";
 import Modal from "../Modal/Modal";
 import ProjectDetails from "../ProjectDetails/ProjectDetails";
