@@ -2,6 +2,8 @@ import React from "react";
 import classnames from "classnames";
 import { usePagination, DOTS } from "../../hooks/usePagination";
 import "./Pagination.css";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Button from "../ui/button/Button";
 const Pagination = (props) => {
   const {
     onPageChange,
@@ -18,7 +20,7 @@ const Pagination = (props) => {
     siblingCount,
     pageSize,
   });
-  
+
   // If there are less than 2 times in pagination range we shall not render the component
   if (currentPage === 0 || paginationRange.length < 2) {
     return null;
@@ -35,7 +37,7 @@ const Pagination = (props) => {
   let lastPage = paginationRange[paginationRange.length - 1];
   return (
     <ul
-      className={classnames("pagination-container", { [className]: className })}
+      className={classnames("pagination-container fadeInUp-animation", { [className]: className })}
     >
       {/* Left navigation arrow */}
       <li
@@ -44,14 +46,16 @@ const Pagination = (props) => {
         })}
         onClick={onPrevious}
       >
-        <div className="arrow left" />
+        <Button disabled={currentPage === 1}>
+          <ChevronLeft />
+        </Button>
       </li>
       {paginationRange.map((pageNumber, idx) => {
         // If the pageItem is a DOT, render the DOTS unicode character
         if (pageNumber === DOTS) {
           return (
             <li key={idx + 1} className="pagination-item dots">
-              &#8230;
+              <Button>&#8230;</Button>
             </li>
           );
         }
@@ -65,7 +69,7 @@ const Pagination = (props) => {
             onClick={() => onPageChange(pageNumber)}
             key={idx + 1}
           >
-            {pageNumber}
+            <Button isActive={pageNumber === currentPage}>{pageNumber}</Button>
           </li>
         );
       })}
@@ -76,7 +80,9 @@ const Pagination = (props) => {
         })}
         onClick={onNext}
       >
-        <div className="arrow right" />
+        <Button disabled={currentPage === lastPage}>
+          <ChevronRight />
+        </Button>
       </li>
     </ul>
   );

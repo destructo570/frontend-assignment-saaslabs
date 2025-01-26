@@ -2,10 +2,11 @@ import React from "react";
 
 const ProjectsTable = ({ projects = [] }) => {
   return (
-    <table cellSpacing="0">
+    <table cellSpacing="0" className="fadeInUp-animation">
       <thead>
         <tr>
           <td>S.No.</td>
+          <td>Title</td>
           <td>Percentage funded</td>
           <td>Amount pledged</td>
         </tr>
@@ -15,8 +16,9 @@ const ProjectsTable = ({ projects = [] }) => {
           return (
             <tr key={project["s.no"]+1}>
               <td>{project["s.no"]+1}</td>
-              <td>{project["percentage.funded"]}</td>
-              <td>{`$${project["amt.pledged"]}`}</td>
+              <td className="project-title">{project["title"]}</td>
+              <td className="percentage-funded">{`${project["percentage.funded"]}%`}</td>
+              <td className="amount-pledged">{`$${project["amt.pledged"]}`}</td>
             </tr>
           );
         })}

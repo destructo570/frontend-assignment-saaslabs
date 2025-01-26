@@ -10,3 +10,18 @@ body{
   margin: 0px;
   padding: 0px;
 }
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.fadeInUp-animation {
+  animation: 0.75s fadeInUp;
+}

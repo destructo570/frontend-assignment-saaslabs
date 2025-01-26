@@ -1,17 +1,24 @@
-h1{
-    background: -webkit-linear-gradient(90deg, #ffffff49 0%, #ffffffe1 75%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.project-list-cont {
+  margin-top: 6rem;
+}
+
+h1 {
+  background: -webkit-linear-gradient(90deg, #ffffff49 0%, #ffffffe1 75%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 table {
-  /* border: 1px solid #ffffff27; */
   width: 100%;
   font-family: "Geist Mono";
 }
 
 td {
-    border: 1px solid #ffffff10;
-    padding: 1rem;
+  border: 1px solid #ffffff10;
+  padding: 1rem;
+}
+
+.project-title {
+  text-align: left;
 }

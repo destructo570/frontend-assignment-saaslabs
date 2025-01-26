@@ -13,11 +13,14 @@ const ProjectList = () => {
     queryKey: ["data"],
     queryFn: fecthProjectList,
   });
-  
+
   return (
-    <div>
-      <h1>Kick Starter Projects</h1>
-      <ProjectsTable projects={getprojectListByPage(data, currentPage, pageSize)} />
+    <div className="project-list-cont">
+      <h1 className="fadeInUp-animation">Kick Starter Projects</h1>
+      <ProjectsTable
+        projects={getprojectListByPage(data, currentPage, pageSize)}
+        className="fadeInUp-animation"
+      />
       <Pagination
         onPageChange={(page) => setCurrentPage(page)}
         totalCount={data.length}
