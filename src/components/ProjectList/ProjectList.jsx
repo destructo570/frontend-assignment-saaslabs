@@ -15,8 +15,7 @@ const ProjectList = () => {
   });
 
   return (
-    <div className="project-list-cont">
-      <h1 className="fadeInUp-animation">Kick Starter Projects</h1>
+    <>
       <ProjectsTable
         projects={getprojectListByPage(data, currentPage, pageSize)}
         className="fadeInUp-animation"
@@ -28,7 +27,7 @@ const ProjectList = () => {
         currentPage={currentPage}
         pageSize={pageSize}
       />
-    </div>
+    </>
   );
 };
 
