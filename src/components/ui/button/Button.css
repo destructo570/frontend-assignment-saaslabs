@@ -9,9 +9,9 @@ button {
   border: none;
   border-radius: 4px;
   font-family: "Geist Mono";
-  color: #29292b;
+  color: var(--text-dark);
   font-weight: 600;
-  background-color: #e2e2e2;
+  background-color: var(--surface-primary);
   transition: background-color 0.1s ease, transform 0.2s ease;
 }
 
@@ -30,10 +30,10 @@ button.btn-large {
 }
 
 button.btn-active {
-  background-color: #6efd8d;
+  background-color: var(--primary-accent);
 }
 
 button:disabled {
-  background-color: #727272;
+  background-color: var(--surface-disabled);
   cursor: not-allowed;
 }
